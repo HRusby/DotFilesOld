@@ -11,28 +11,16 @@ cd "${HOME}"
 PKGS=(
 
 	# ----- Classification -----
-	'neovim',	# NeoVim Editor
-	'i3',		# Window Manager
-	'spotify',	# Music Player
-    'lightdm'   # Display Manager
-	#'visual-studio-code-insiders-bin', # VS Code
-	#'dbeaver', 	# Database Editor
-	'alacritty', 	# Terminal Emulator
-	'docker',	# Containerisation
-	'docker-compose'# Containerisation
-	'thunar',	# File Manager
-	'firefox',	# Web Browser
-	'dotnet-sdk', 	# Dotner Dev
-	'aspnet-runtime', 	# Dotnet Dev
-	'signal-desktop',# Encrypted Comms
-	'tree',						# Cli directory visualisation
-	#'sleek', 	# ToDo List
-	'tmux', 	# Terminal Multiplexer
-	'feh', 	# Wallpaper Controller
-    'xclip'     # Clipboard Cli Utility
-    # NVim requirements
-    'ripgrep',  # Grep CMD Tool for telescope
-    'fd',       # Find Alternative for Telescope
+	'base-devel' 				# Basic Development Tools: gcc, make, perl etc.
+	'git'					# Version Control
+	'neovim',				# NeoVim Editor
+	'dotnet-sdk', 				# Dotner Dev
+	'aspnet-runtime', 			# Dotnet Dev
+	'tree',					# Cli directory visualisation
+	'tmux', 				# Terminal Multiplexer
+	# NVim requirements
+    	'ripgrep',  				# Grep CMD Tool for telescope
+    	'fd',       				# Find Alternative for Telescope
 )
 
 for PKG in "${PKGS[@]}"; do
