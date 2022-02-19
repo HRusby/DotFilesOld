@@ -10,10 +10,7 @@ cd "${HOME}"
 
 PKGS=(
 	# ----- Classification -----
-	'spotify'	# Music Player
-	'polybar'	# I3 Bar
-    'obsidian'  # Note Taking
-    'omnisharp-roslyn',
+    	'omnisharp-roslyn',
 	'nerd-fonts-hack', # Font for DevIcons
 )
 
