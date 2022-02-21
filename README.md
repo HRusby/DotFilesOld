@@ -71,3 +71,40 @@ wsl --set-version <NewDistroName> 2
 ```sh
 wsl.exe -d <NewDistroName> -u <UserName>
 ```
+## Ubuntu install
+To get Nerdfonts installed
+1. Download .zip
+```sh
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip -o /mnt/c/tmp/Hack.zip
+unzip /mnt/c/tmp/Hack.zip -o /mnt/c/tmp/Hack
+```
+1. Enter C:\tmp\Hack, Select all .ttf files and press enter to install them 
+
+
+Install Neovim
+```sh
+sudo apt update && sudo apt upgrade
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+```
+
+Other Packages
+```sh
+sudo apt install tree
+sudo apt install ripgrep
+sudo apt install fd
+sudo apt install npm
+```
+
+Certificates:
+https://github.com/microsoft/WSL/issues/3161
+Go to Manage User Certificates >  Trusted Root Certification Authorities > Certificates > Open the root CA you are interesed in
+> Details > Copy To File > Base64 X.509
+
+Copy that .cer file to /usr/local/share/ca-certificates in WSL2
+Run 
+sudo openssl x509 -inform PEM -in xxx.cer -out xxx.crt
+sudo update-ca-certificates
+
+Verify:
+ls /etc/ssl/certs | grep xxx
